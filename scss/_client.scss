@@ -1,0 +1,49 @@
+.client{
+    background-color: #fff;
+    background-image :url($url + 'bg_msec04.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .sub-text{
+        color: #fff;
+        font-weight: 500;
+        font-size: 32px;
+        &:after{
+            color:#fff;
+        }
+    }
+
+    .differ{
+        width: 70%;
+    }
+
+}
+
+.three_client{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    .three_text{
+        color: #fff;
+        font-size: 23px;
+        line-height: 36px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        &:after{
+            content:"";
+            display: block;
+            background-color: #fff;
+            width: 52px;
+            height:2px;
+            margin-top: 20px;
+        }
+    }
+
+    p{
+        color: #fff;
+        font-weight:300;
+        line-height: 27px;
+    }
+}

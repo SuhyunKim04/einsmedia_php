@@ -1,0 +1,146 @@
+.clearfix { 
+    &:after {
+        display:block;
+        clear:both;
+    }
+}
+
+
+
+%title {
+    
+    $primaryColor : blue;
+    $size : 30;
+    font : {
+        size : ($size * 0.8% )  +  px;
+        weight:700;
+    }
+    color:$primaryColor; 
+
+    text : {
+        align:center;
+        decoration:line-through;
+        indent:50px;
+        shadow: 0 0 10px rgba(dodgerblue, 0.3);
+    }
+   
+
+}
+
+@mixin shadow($x, $y, $blur) { 
+     box-shadow: $x $y $blur;
+     @content;
+}
+
+.box {
+    color:$primaryColor;
+    width:300px;height:100px;
+    @include shadow(0,0, 30px) {
+        border-radius:20px;
+    }
+}
+
+@mixin point ($color, $way:left, $size:10px ){
+    width: 0px;
+    height: 0px;
+    border: $size solid transparent;
+    border-#{$way}-color: $color;
+    
+}
+
+.slide{
+    @include point(Red, $size: 30px);
+}
+
+@mixin arrow ($color, $way:left, $size:20px) { 
+    width:0px;
+    height: 0px;
+    border: $size solid transparent;
+    border-#{$way}-color:$color;
+    
+}
+
+
+.wrap {
+    @include arrow(Red,  $size:10px); 
+}
+
+.contain{
+    @include arrow(green, right, 30px); 
+}
+
+@mixin posCenterY($left, $right:null) {
+     position:absolute; 
+     display:block;
+     left:$left;
+     right:$right;
+     top:50%;
+     transform:translateY(-50%);
+}
+
+@mixin afterArrow() {
+    position:relative; 
+
+    &:after {
+        content:'';
+        @include posCenterY(100%);
+        @include arrow(#222, left, 10px);
+    }
+}
+
+@mixin afterIcon($w, $h, $img) {
+    position:relative;
+    &:after {
+        content:'';
+        width:$w;
+        height:$h;
+        display:block;
+        position:absolute;
+        background:url($url + $img) no-repeat center center/contain;
+        @include posCenterY(100%);
+        margin-left:5px; 
+    }
+}
+
+.icon {
+    @include afterArrow();
+    width:50px;height:2px; background:#222;
+}
+
+// .icon2 {
+//     @extend %title;
+//     width:200px;
+//     border:1px solid red;
+//     background:olive;
+//     @include afterIcon(100px, 100px, 'ft_logo.png' );
+// }
+
+// .icon3 {
+//     width:100px;
+//     @extend %title;
+//     @include afterIcon(50px,50px,'bg_msec05.jpg');
+// }
+
+.arrow {
+    width:50px;
+    height:2px;
+    background:#000;
+    margin:50px auto;
+    position: relative;
+
+    &:after {
+        content:"";
+        @include arrow(pink,left,10px);
+        
+        
+        /*display: block;
+        position: absolute;
+        left:100%;top: 50%;
+        transform:translateY(-50%);
+        */
+        // top: calc(50% - 10px);
+
+
+    }
+}
+

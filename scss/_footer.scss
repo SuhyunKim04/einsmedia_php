@@ -1,0 +1,140 @@
+
+@mixin shadow($color:black) {
+     
+}
+
+.floatWrap {
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    text-align: center;
+    color:#fff;
+
+    .ad {
+        @include circle(70,$primaryColor);
+        overflow: hidden;
+        padding-top: 20px;
+        box-sizing:border-box;
+        transition: all 0.5s;
+        margin-bottom: 10px;
+        // box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+        // @include shadow(20, black);
+    
+        img{
+            width: 29px;
+        }
+    
+        strong{
+            display: block;
+            transform: translateY(14px);
+            font-size: 12px;
+            letter-spacing: -0.03em;
+            font-weight:500;
+            transition:all 0.4s 0.4s;
+        }
+    
+        li{
+            margin-bottom: 19px;
+
+            &:nth-child(2) strong {
+                transition-delay:0.5s;
+            }
+            &:nth-child(3) strong {
+                transition-delay:0.6s;
+            }
+        }
+    }
+
+    &:hover {
+        .ad{
+            height:230px;
+        }
+    
+        strong{
+            transform: translateY(0)
+        }
+    }
+    
+    .top {
+        font-weight:600;
+        font-size: 12px;
+        text-shadow: 0 0 3px rgba(0,0,0,0.8);
+
+    }
+}
+
+.pageFooter{
+    background-color: #222;
+    color: #ccc;
+
+
+    .inquiry{
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        font-size: 14px;
+        font-weight: 700;
+        padding-top: 40px;
+        margin-left: 20px;
+    }
+
+    .footer{
+        display: flex;
+        color: #888;
+        margin-top: 10px;
+        margin-left: 20px;
+        li{
+            margin-right: 20px;
+        }
+        li:after{
+            content:"";
+            display: block;
+            width: 1px;
+            height: 12px;
+            background-color: #666;
+            position: relative;
+            bottom: 50%;right: 10px;
+        }
+    }
+
+    address{
+        font-size: 14px;
+        font-weight: 400;
+        color: #888;
+        font-style: normal;
+        margin-left: 20px;
+    }
+
+    .buttom_logo{
+        display: flex;
+        justify-content: flex-end;
+        img{
+            width: 190px;
+           
+        }
+    }
+}
+
+ 
+
+
+
+
+// @mixin center {
+//     position:fixed;
+//     left:50%;
+//     top:50%;
+//     transform:translate(-50%, -50%);
+// }
+
+
+
+
+// .test {
+//     color:#fff;
+//     @include circle(200, $primaryColor);
+//     @include center;
+//     @include flex(center, center);  
+// }
+

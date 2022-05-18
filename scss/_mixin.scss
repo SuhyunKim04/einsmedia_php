@@ -1,0 +1,48 @@
+@mixin circle($size, $bg:null) {   
+    border-radius: calc( $size / 2 ) + px;
+    $size : $size + px;
+    width:$size;
+    height:$size;
+    background-color:$bg;
+}
+
+
+
+@mixin redFont($c:$primaryColor, $size:null,$bg:#222) {
+    color:$c;
+    font-size:$size;
+    background-color:$bg;   
+}
+
+
+@mixin flex($j:space-between, $a:null) {
+    display:flex;
+    -ms-display:flex; 
+    -webkit-display:flex; 
+
+    align-items:$a;
+    -ms-align-items:$a;
+
+    justify-content:$j;
+    -ms-justify-content:$j;
+    
+}
+
+// .pageFooter {
+   
+//     @include circle(80px,gold);
+// }
+
+
+.test {
+    @include redFont($bg:red,$size:30px)
+}
+
+@mixin triangle ($color, $way:left, $size:10px ){
+    width: 0px;
+    height: 0px;
+    border: $size solid transparent;
+    border-#{$way}-color: $color;
+}
+  
+

@@ -1,0 +1,129 @@
+.inner_second {
+    max-width:1350px;
+    width:100%;
+    box-sizing:border-box;
+    padding:90px 25px 0;
+    margin:0 auto;
+
+    h2{
+        font-size: 32px;
+        font-weight: 700;
+        &:after {
+            content:'';
+            color:$primaryColor;
+            font-weight:800;
+            margin-left:-7px;
+        }
+    }
+}
+
+.four_people{
+    display: flex;
+    margin: 50px 0 90px;
+    justify-content: space-between;
+
+
+    .four_text{
+        font-size: 22px;
+        font-weight: 700;
+        &:after{
+            content:"";
+            display: block;
+            background-color: #222;
+            width: 220px;
+            height:3px;
+            margin: 20px 0;
+        }
+    }
+
+    .addition{
+            width: 50px;
+            height: 2px;
+            background-color: #222;
+            position: relative;
+        
+            &:after{
+                content:"";
+                display: block;
+               @include triangle(#222, $size: 6px);
+                transform: translateY(-50%);
+               left:100%;top:10%;
+               position: absolute;
+            }
+        }
+}
+
+
+.contactBox{
+    background-color: #e60012;
+    padding: 30px 20px;
+    margin: 0 30px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 200px;
+    z-index: 2000;
+    box-shadow: 0 20px 35px rgb(0 0 0 / 28%);
+
+    .contact{
+        margin-top: 15px;
+        h3{
+            font-size: 22px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        h4{
+            font-size: 36px;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+
+    form{
+        label{
+            color: #fff;
+        }
+
+        .text_name{
+            width: 410px;
+            height: 36px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border:none;
+            padding-left: 20px;
+        }
+
+        .text_number{
+            width: 410px;
+            height: 36px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border:none;
+            padding-left: 20px;
+        }
+    }
+
+    button{
+        display: block;
+        color: #fff;
+        background-color: transparent;
+        border: 3px solid #fff;
+        outline: none;
+        font-weight: 500;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
+        height: 85px;
+    }
+
+}
+
+ .map{
+     position:relative;
+     margin-top:-50px;
+     iframe{
+        width: 100%;
+        height: 350px;
+     }
+ }

@@ -1,0 +1,25 @@
+.solution{
+    background-color: #fff;
+    background-image :url($url + 'bg_msec03.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.four_solution{
+   display: grid;
+   outline: 1px solid blue;
+   width: 70%;
+   margin: 0 0 0 auto;
+   grid-template-columns: repeat(2, 1fr);
+ 
+   
+   
+   .solution{
+       font-size: 22px;
+       font-weight: 700;
+   }
+   p{
+       line-height: 26px;
+   }
+}

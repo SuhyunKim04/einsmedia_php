@@ -1,0 +1,80 @@
+.four-content{
+    background-color: #fff;
+    background-image :url($url + 'business_01.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .sub-text{
+        color: #fff;
+    }
+    p{
+        color: #fff;
+        &:before{
+            background-color:#fff;
+        }
+    }
+
+}
+
+.four_box{
+    display: flex;
+    margin-top: 50px;
+
+    li{
+        border: 1px solid #6a6865; 
+
+        &:not(:first-child){
+            border-width: 1px 1px 1px 0;
+        }
+    }
+
+    .channel{
+        color: #fff;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: center; 
+        margin: 20px 0 30px;
+    }
+
+    p{
+        font-size: 14px;
+        opacity: 0.5;
+        line-height: 25px; 
+    }
+    a {
+        display:block;
+        padding:50px 30px;
+        &:hover {
+            background: #e60012;
+            border-color: #e60012;
+        }
+    }
+    
+
+}
+
+.icimage{
+    height:55px;
+    width:57px;
+    display: block;
+    position: relative;
+    background:  url($url + 'ic_list_02.png') -2px 0/auto 50px ;
+    background-size: 240px;
+    margin: 0 auto;    
+}
+
+.two{
+    background:  url($url + 'ic_list_02.png') -50px 0/auto 50px ; 
+}
+
+.three{
+    background:  url($url + 'ic_list_02.png') -113px 0/auto 55px ; 
+}
+
+.four{
+    background:  url($url + 'ic_list_02.png') -170px 0/auto 55px ; 
+}
+ 
+
+
