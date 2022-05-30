@@ -41,6 +41,10 @@ em, i {
   background-color: red;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   color: #222;
   font-size: 15px;
@@ -87,7 +91,7 @@ body {
 .pageHeader h1 img {
   width: 100%;
 }
-.pageHeader .nav_bar ul {
+.pageHeader .nav_bar .menu {
   display: flex;
   -ms-display: flex;
   -webkit-display: flex;
@@ -95,11 +99,16 @@ body {
   -ms-justify-content: center;
   margin-right: 30px;
 }
-.pageHeader .nav_bar ul li {
+.pageHeader .nav_bar .menu > li {
   margin-right: 40px;
 }
-.pageHeader .nav_bar ul li a {
-  line-height: 32px;
+.pageHeader .nav_bar .menu > li > a {
+  display: block;
+  padding: 8px 0;
+}
+.pageHeader .nav_bar .sub {
+  background-color: red;
+  width: 178px;
 }
 .pageHeader .btnHam {
   color: #fff;
@@ -121,6 +130,10 @@ body {
 @media all and (max-width: 970px) {
   .pageHeader {
     color: #222;
+    background: transparent;
+  }
+  .pageHeader h1 {
+    width: 142px;
   }
   .pageHeader .nav_bar {
     position: fixed;
@@ -133,6 +146,9 @@ body {
     z-index: 3002;
     padding: 70px 30px 0;
     box-sizing: border-box;
+  }
+  .pageHeader .nav_bar .menu {
+    display: none;
   }
   .pageHeader .nav_bar ul {
     display: block;
@@ -153,6 +169,20 @@ body {
     width: 0;
   }
 }
+#test {
+  color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  font-size: 30px;
+  /*
+      1em = 100% -> parent font-size
+      1rem = 100% -> root font-size
+      1vw = 0.01%
+      100vw = 100% -> device width
+  */
+}
+
 .logo_page {
   background: url("../images/mainBG_01.jpg") no-repeat center center/cover;
   display: flex;
@@ -180,6 +210,24 @@ body {
 }
 .SNS_list img {
   height: 18px;
+}
+
+@media all and (max-width: 970px) {
+  .pc {
+    display: none;
+  }
+}
+.SNS_list {
+  display: flex;
+  position: absolute;
+  bottom: 72px;
+  left: 30px;
+}
+.SNS_list li:nth-child(2) img {
+  height: 18px;
+}
+.SNS_list img {
+  height: 13px;
 }
 
 .home_main {
@@ -283,20 +331,6 @@ body {
   background-size: 240px;
 }
 
-/* .add{
-    position:relative;
-    left:50px;
-    margin-top: 20px;
-
-    &:before{
-        content:"";
-        display: block;
-        position: absolute;
-        width: 40px;
-        height: 2px;
-        background: #222;
-        right:6px;top:-0.8px; }
-} */
 .add {
   width: 50px;
   height: 2px;
@@ -320,6 +354,47 @@ body {
   .home_main {
     height: auto;
   }
+
+  .logo_page {
+    height: 560px;
+  }
+  .logo_page h2 {
+    font-size: 47px;
+  }
+  .logo_page p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 22px;
+  }
+
+  .Sub {
+    display: block;
+    text-align: center;
+  }
+  .Sub .sub-text {
+    font-size: 28px;
+    width: auto;
+  }
+  .Sub p {
+    font-size: 16px;
+    padding-left: 0;
+  }
+  .Sub p:before {
+    display: none;
+  }
+
+  .six_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+    margin: 60px auto;
+    max-width: 700px;
+  }
+  .six_box li {
+    background-color: #f6f6f6;
+    position: relative;
+    padding: 15px;
+  }
 }
 .four-content {
   background-color: #fff;
@@ -341,9 +416,12 @@ body {
 .four_box {
   display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 .four_box li {
   border: 1px solid #6a6865;
+  width: 25%;
+  box-sizing: border-box;
 }
 .four_box li:not(:first-child) {
   border-width: 1px 1px 1px 0;
@@ -391,6 +469,18 @@ body {
   background: url("../images/ic_list_02.png") -170px 0/auto 55px;
 }
 
+@media all and (max-width: 970px) {
+  .four_box {
+    flex-wrap: wrap;
+  }
+  .four_box li {
+    width: 50%;
+    margin-top: -1px;
+  }
+  .four_box li:nth-child(3) {
+    border-left-width: 1px;
+  }
+}
 .clearfix:after {
   display: block;
   clear: both;
@@ -561,6 +651,18 @@ body {
   width: 190px;
 }
 
+@media all and (max-width: 970px) {
+  .floatWrap .ad {
+    border-radius: 29px;
+    width: 58px;
+    height: 58px;
+    background-color: #e60012;
+    padding-top: 15px;
+  }
+  .floatWrap .ad img {
+    width: 23px;
+  }
+}
 .solution {
   background-color: #fff;
   background-image: url("../images/bg_msec03.jpg");
@@ -571,19 +673,35 @@ body {
 
 .four_solution {
   display: grid;
-  outline: 1px solid blue;
   width: 70%;
   margin: 0 0 0 auto;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 140px;
+  grid-gap: 50px;
+  padding-top: 60px;
 }
 .four_solution .solution {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 700;
 }
+.four_solution .solution:after {
+  content: "";
+  display: block;
+  background-color: #222;
+  width: 100%;
+  height: 3px;
+  margin: 0.45em 0 10px 0;
+}
 .four_solution p {
-  line-height: 26px;
+  line-height: 1.73;
+  letter-spacing: -1;
 }
 
+@media all and (max-width: 970px) {
+  .four_solution {
+    width: auto;
+  }
+}
 .client {
   background-color: #fff;
   background-image: url("../images/bg_msec04.jpg");
@@ -629,12 +747,16 @@ body {
   line-height: 27px;
 }
 
+@media all and (max-width: 970px) {
+  .client .Sub {
+    text-align: left;
+  }
+}
 .chart {
   background-image: url("../images/bg_msec05.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 0 0 70px;
 }
 .chart h2 {
   color: #fff;
@@ -698,10 +820,12 @@ body {
   margin: 20px 0;
 }
 .four_people .addition {
-  width: 50px;
+  width: 25px;
   height: 2px;
   background-color: #222;
   position: relative;
+  left: 170px;
+  bottom: 50px;
 }
 .four_people .addition:after {
   content: "";
@@ -712,7 +836,7 @@ body {
   border-left-color: #222;
   transform: translateY(-50%);
   left: 100%;
-  top: 10%;
+  top: 50%;
   position: absolute;
 }
 
@@ -740,6 +864,15 @@ body {
   color: #fff;
   font-weight: 700;
 }
+.contactBox .contact strong {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 600;
+}
+.contactBox .contact a {
+  display: block;
+  color: #fff;
+}
 .contactBox form label {
   color: #fff;
 }
@@ -761,6 +894,7 @@ body {
 }
 .contactBox button {
   display: block;
+  position: absolute;
   color: #fff;
   background-color: transparent;
   border: 3px solid #fff;
@@ -770,6 +904,9 @@ body {
   font-size: 18px;
   font-weight: 500;
   height: 85px;
+  right: 50px;
+  top: 30px;
+  padding: 0 20px 0;
 }
 
 .map {

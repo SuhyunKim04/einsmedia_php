@@ -116,7 +116,20 @@
     }
 }
 
- 
+@media all and (max-width:970px){
+    .floatWrap{
+        .ad {
+            @include circle(58,$primaryColor);
+            padding-top: 15px;
+
+            img{
+                width: 23px;
+            }
+    }
+
+    
+}
+} 
 
 
 

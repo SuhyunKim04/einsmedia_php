@@ -37,17 +37,18 @@
     }
 
     .addition{
-            width: 50px;
+            width: 25px;
             height: 2px;
             background-color: #222;
             position: relative;
+            left: 170px;bottom: 50px;
         
             &:after{
                 content:"";
                 display: block;
                @include triangle(#222, $size: 6px);
                 transform: translateY(-50%);
-               left:100%;top:10%;
+               left:100%;top:50%;
                position: absolute;
             }
         }
@@ -78,6 +79,17 @@
             color: #fff;
             font-weight: 700;
         }
+
+        strong{
+            color: #fff;
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        a{
+            display: block;
+            color: #fff;
+        }
     }
 
     form{
@@ -106,6 +118,7 @@
 
     button{
         display: block;
+        position: absolute;
         color: #fff;
         background-color: transparent;
         border: 3px solid #fff;
@@ -115,6 +128,8 @@
         font-size: 18px;
         font-weight: 500;
         height: 85px;
+        right: 50px;top:30px;
+        padding: 0 20px 0;
     }
 
 }

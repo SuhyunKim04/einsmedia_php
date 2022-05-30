@@ -3,12 +3,12 @@
     <div class="inner"> 
         <header class="Sub">
             <h2 class="sub-text">
-                A부터 Z까지 꼼꼼하게 <br>
+                A부터 Z까지 꼼꼼하게 <br class="pc">
                 따져볼수록 아인스미디어
             </h2>
         
             <p>
-                광고관리의 노하우와 경험을 통해 최적화 된 광고 전략과<br>
+                광고관리의 노하우와 경험을 통해 최적화 된 광고 전략과<br class="pc">
                 솔루션을 제공합니다
             </p>
         </header>

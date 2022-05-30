@@ -47,3 +47,9 @@
         line-height: 27px;
     }
 }
+
+@media all and(max-width: 970px){
+    .client .Sub{
+        text-align: left;
+    }
+}

@@ -20,9 +20,12 @@
 .four_box{
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
 
     li{
         border: 1px solid #6a6865; 
+        width: 25%;
+        box-sizing: border-box;
 
         &:not(:first-child){
             border-width: 1px 1px 1px 0;
@@ -76,5 +79,16 @@
     background:  url($url + 'ic_list_02.png') -170px 0/auto 55px ; 
 }
  
-
+@media all and (max-width: 970px){
+    .four_box{
+        flex-wrap: wrap;
+        li{
+            width: 50%;
+            margin-top: -1px;
+            &:nth-child(3){
+                border-left-width: 1px;
+            }
+        }
+    }
+}
 

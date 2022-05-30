@@ -7,7 +7,9 @@ $textColor: #222;
 $url: '../images/';
 
 @import 'reset', 'mixin';
-
+html { 
+    font-size:10px;
+}
 // init
 body {  
     color: $textColor;
@@ -30,6 +32,23 @@ body {
 
 
 // home - section 1 - logo_page
+
+
+#test {
+    color:#fff;
+    position:fixed;
+    left:50%;
+    top:50%;
+    font-size:30px; 
+   
+/*
+    1em = 100% -> parent font-size
+    1rem = 100% -> root font-size
+    1vw = 0.01%
+    100vw = 100% -> device width
+*/
+   
+}
 
 .logo_page {
     background:url($url + 'mainBG_01.jpg') no-repeat center center/cover;
@@ -63,6 +82,24 @@ body {
 }
 
 
+@media all and (max-width:970px) {
+  .pc {
+      display:none;
+  }
+}
+.SNS_list {
+    display: flex;
+    position: absolute;
+    bottom: 72px;left: 30px; 
+
+    li:nth-child(2) img{
+        height: 18px;
+    }
+
+    img { 
+        height:13px; 
+    }
+  }
 
  
 @import 'content','channel','test','footer';

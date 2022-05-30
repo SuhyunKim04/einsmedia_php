@@ -29,15 +29,22 @@
 
     .nav_bar { 
         
-        ul {
+        .menu {
             @include flex(center);
             margin-right:30px;
-            li {
+            & > li {
                 margin-right:40px; 
-                a {
-                    line-height:32px;
+               
+                & > a { 
+                    display:block;
+                    padding:8px 0;
                 }
             }
+        }
+
+        .sub {
+            background-color:red;
+            width:178px;
         }
     }
 
@@ -66,6 +73,11 @@
 @media all and (max-width: 970px){
     .pageHeader{
         color: #222;
+        background: transparent;
+
+        h1{
+            width: 142px;
+        }
 
         .nav_bar{
             position: fixed;
@@ -77,6 +89,10 @@
             z-index:3002;
             padding: 70px 30px 0;
             box-sizing:border-box;
+            .menu {
+                display: none;
+            }
+
 
             ul{
                 display: block; 

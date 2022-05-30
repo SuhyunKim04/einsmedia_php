@@ -6,8 +6,16 @@
         </a>
     </h1>
     <nav class="nav_bar">
-        <ul>
-            <li><a href="https://www.naver.com/">Business</a></li>
+        <ul class="menu">
+            <li>
+                <a href="https://www.naver.com/">Business</a>
+                <ul class="sub">
+                    <li><a href="#">SUB menu1</a></li>
+                    <li><a href="#">SUB menu1</a></li>
+                    <li><a href="#">SUB menu1</a></li>
+                    <li><a href="#">SUB menu1</a></li>
+                </ul>   
+            </li>
             <li><a href="https://www.naver.com/">Why EINS</a></li>
             <li><a href="https://www.naver.com/">Solution</a></li>
             <li><a href="https://www.naver.com/">Porfolio</a</li>

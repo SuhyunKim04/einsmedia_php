@@ -1,13 +1,14 @@
 .home_main{
     height:100vh;
+    
 
-.inner {
-    max-width:1350px;
-    width:100%;
-    box-sizing:border-box;
-    padding:90px 25px;
-    margin:0 auto;
-}
+    .inner {
+        max-width:1350px;
+        width:100%;
+        box-sizing:border-box;
+        padding:90px 25px;
+        margin:0 auto;
+    }
 }
 
 .Sub{
@@ -53,9 +54,6 @@
 
      grid-template-columns: 1fr 1fr 1fr; 
      grid-gap:32px;
-
-
-
      margin-top: 60px;
 
     li{
@@ -114,34 +112,6 @@
     background-size: 240px;
 }
 
-/* .add{
-    position:relative;
-    left:50px;
-    margin-top: 20px;
-
-    &:before{
-        content:"";
-        display: block;
-        position: absolute;
-        width: 40px;
-        height: 2px;
-        background: #222;
-        right:6px;top:-0.8px; }
-} */
-
-// @mixin centerV{
-//     transform:translateY(-50%);
-//     top:50%;
-//     position: absolute;
-// }
-
-// @mixin centerH{
-//     transform:translateX(-50%);
-//     left:50%;
-//     position: absolute;
-// }
-
-
 
 .add{
     width: 50px;
@@ -160,37 +130,7 @@
 }
 
 
-// @mixin center($way:null) {
-//     position:absolute;
-//     $value : 50%;
-//     @if ( $way == null ) {
-//         transform:translate(-50%, -50%);
-//         left:50%; top:50%;
-//     } @else {
-//         transform:translate#{$way}(-50%);
-//         @if( $way == 'X') {
-//             left:50%;
-//         } @else  {
-//             top:50%;
-//         }
-//     } 
-// }
 
-// .motion{
-//     width: 50px;
-//     height:2px;
-//     background-color:darkblue;
-//     position: relative;
-
-//     &:after{
-//         content:"";
-//         display: block;
-//         @include triangle(#222, $size: 6px);
-//         @include center(Y);
-//     }
-// }
-
- 
 
 
 
@@ -198,5 +138,54 @@
     .home_main  {
         height:auto;
     }
-}
 
+    .logo_page{
+        height: 560px;
+    
+        h2{
+            font-size: 47px;
+        }
+
+        p{
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 22px;
+        }
+    }
+    .Sub{
+        display: block;
+        text-align: center;
+        
+    
+       .sub-text{
+            font-size: 28px;
+            width: auto;
+            
+        }
+        p{
+            font-size: 16px;
+            padding-left: 0;
+
+            &:before{
+                display: none;
+            }
+        }
+    }
+
+    .six_box{
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-gap:32px;
+        margin: 60px auto;
+        max-width: 700px;
+        
+    
+       li{
+           background-color: #f6f6f6;
+           position: relative;
+           padding:15px;
+       }
+    }
+    
+}
+ 
