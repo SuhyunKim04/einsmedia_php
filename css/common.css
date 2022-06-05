@@ -393,7 +393,16 @@ body {
   .six_box li {
     background-color: #f6f6f6;
     position: relative;
-    padding: 15px;
+    padding: 35px 15px;
+  }
+
+  .ic {
+    top: 25px;
+  }
+}
+@media all and (max-width: 720px) {
+  .logo_page {
+    width: 720px;
   }
 }
 .four-content {
@@ -662,6 +671,13 @@ body {
   .floatWrap .ad img {
     width: 23px;
   }
+
+  .pageFooter .inquiry {
+    margin: 0 auto;
+  }
+  .pageFooter .footer {
+    margin: 0 auto;
+  }
 }
 .solution {
   background-color: #fff;
@@ -718,13 +734,19 @@ body {
   color: #fff;
 }
 .client .differ {
-  width: 70%;
+  width: 65%;
 }
 
 .three_client {
   display: flex;
   justify-content: space-between;
   margin-top: 60px;
+}
+.three_client li {
+  width: 350px;
+}
+.three_client li:nth-child(3) {
+  margin-right: 0px;
 }
 .three_client .three_text {
   color: #fff;
@@ -751,6 +773,21 @@ body {
   .client .Sub {
     text-align: left;
   }
+
+  .client .differ {
+    font-size: 25px;
+  }
+
+  .three_client .three_text {
+    font-size: 20px;
+    width: 70%;
+  }
+  .three_client p {
+    font-size: 15px;
+  }
+  .three_client li {
+    width: 280px;
+  }
 }
 .chart {
   background-image: url("../images/bg_msec05.jpg");
@@ -766,7 +803,7 @@ body {
 }
 .chart .chart_buttom {
   color: #fff;
-  font-size: 16.5px;
+  font-size: 16px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px 0;
   border-radius: 30px;
@@ -784,6 +821,14 @@ body {
   display: block;
 }
 
+@media all and (max-width: 970px) {
+  .chart h2 {
+    font-size: 25px;
+  }
+  .chart .chart_buttom {
+    font-size: 15px;
+  }
+}
 .inner_second {
   max-width: 1350px;
   width: 100%;
@@ -843,7 +888,6 @@ body {
 .contactBox {
   background-color: #e60012;
   padding: 30px 20px;
-  margin: 0 30px;
   display: grid;
   position: relative;
   grid-template-columns: 1fr 1fr 200px;
@@ -877,20 +921,22 @@ body {
   color: #fff;
 }
 .contactBox form .text_name {
-  width: 410px;
+  width: 100%;
   height: 36px;
   margin-bottom: 8px;
   border-radius: 5px;
   border: none;
   padding-left: 20px;
+  box-sizing: border-box;
 }
 .contactBox form .text_number {
-  width: 410px;
+  width: 100%;
   height: 36px;
   margin-bottom: 8px;
   border-radius: 5px;
   border: none;
   padding-left: 20px;
+  box-sizing: border-box;
 }
 .contactBox button {
   display: block;
@@ -906,7 +952,7 @@ body {
   height: 85px;
   right: 50px;
   top: 30px;
-  padding: 0 20px 0;
+  padding: 0 25px 0;
 }
 
 .map {
@@ -916,6 +962,23 @@ body {
 .map iframe {
   width: 100%;
   height: 350px;
+}
+
+@media all and (max-width: 970px) {
+  .four_people {
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+  .four_people li {
+    width: 50%;
+  }
+
+  .contactBox .contact h3 {
+    font-size: 20px;
+  }
+  .contactBox .contact strong {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=common.css.map */

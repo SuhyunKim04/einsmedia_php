@@ -15,7 +15,7 @@
     }
 
     .differ{
-        width: 70%;
+        width: 65%;
     }
 
 }
@@ -24,6 +24,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+
+    li{
+        width: 350px;
+
+        &:nth-child(3){
+            margin-right: 0px;
+        }
+    }
 
     .three_text{
         color: #fff;
@@ -52,4 +60,25 @@
     .client .Sub{
         text-align: left;
     }
+
+    .client .differ{
+        font-size: 25px;
+    }
+
+    .three_client{
+        .three_text{
+            font-size: 20px;
+            width: 70%;
+        }
+
+        p{
+            font-size: 15px;
+        }
+
+        li{
+            width: 280px;
+        }
+    }
+
+
 }

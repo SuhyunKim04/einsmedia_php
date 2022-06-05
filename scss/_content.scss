@@ -183,9 +183,19 @@
        li{
            background-color: #f6f6f6;
            position: relative;
-           padding:15px;
+           padding: 35px 15px;
        }
     }
+
+    .ic{
+        top:25px;
+    }
     
+}
+
+@media all and (max-width:720px) {
+    .logo_page{
+        width: 720px;
+    }
 }
  
