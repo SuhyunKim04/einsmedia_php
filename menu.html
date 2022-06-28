@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNB</title>
+    <style>
+        .menu {
+            position: fixed;
+            width: 50%;
+            height: 100vh;
+            box-sizing: border-box;
+            right: 0;
+            top: 0;
+            background: #222;
+            color: #fff;
+            transition: all 0.4s;
+        }
+
+        .menu.open {
+            right: 100px;
+        }
+
+        .btnHam.open {
+            border-color:red;
+        }
+
+        .btnHam.open:after {
+            content: '열림';
+
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btnHam">
+        햄버거
+    </button>
+    <div class="menu">menu</div>
+
+    <script>
+        const btn = document.querySelector('.btnHam');
+        const menu = document.querySelector('.menu');
+        /* 화살표 함수일때의 this는 window객체를 가리키고, 일반함수일때의 this는 이벤트가 일어난 객체를 가리킨다.*/
+        
+        btn.addEventListener('click', (e) => {
+
+            console.log(this)
+            console.log(e.target, e.currentTarget);
+            menu.classList.toggle('open')
+            btn.classList.toggle('open');
+
+            if( btn.classList.contains('open')) {
+                btn.innerHTML = 'CLOSE'
+            }
+        })
+
+
+ 
+    </script>
+</body>
+
+</html>

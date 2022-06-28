@@ -82,3 +82,21 @@
 
 
 }
+
+@media all and(max-width: 720px) {
+    .three_client{
+        display: block;
+
+        li{
+            width: auto;
+        }
+
+        .three_text{
+       
+            &:after{
+            display: none;
+        }
+        }
+    }
+
+}

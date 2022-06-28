@@ -31,5 +31,6 @@
     <?php include  './inc/chart.php' ?>
     <?php include  './inc/people.php' ?>
     <?php include './inc/footer.php' ?> 
+    <script src="./js/script.js"></script>
 </body>
 </html>

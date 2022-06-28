@@ -154,6 +154,7 @@
      }
 
      .contactBox{
+         display: block;
          .contact{
              h3{
                  font-size: 20px;
@@ -162,5 +163,20 @@
                  font-size: 30px;
              }
          }
+         form {
+             .text_name{
+                 width:80%;
+             }
+             .text_number{
+                width:80%;
+
+             }
+         }
+        button{
+            padding: 15px;
+            font-size: 15px;
+            top: 115px;
+            right: 20px;
+        }
      }
  }

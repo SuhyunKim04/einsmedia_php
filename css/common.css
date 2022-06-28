@@ -85,11 +85,22 @@ body {
   background-color: black;
   z-index: 3000;
 }
-.pageHeader h1 {
+.pageHeader h1.logo {
   width: 180px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
 }
-.pageHeader h1 img {
+.pageHeader h1.logo img {
   width: 100%;
+}
+.pageHeader h1.logo.open {
+  transform: translateX(200px);
+}
+.pageHeader .nav_bar {
+  position: absolute;
+  right: 45px;
+  text-align: center;
 }
 .pageHeader .nav_bar .menu {
   display: flex;
@@ -100,15 +111,27 @@ body {
   margin-right: 30px;
 }
 .pageHeader .nav_bar .menu > li {
-  margin-right: 40px;
+  padding: 0 8px;
+  position: relative;
+  margin-right: 10px;
 }
 .pageHeader .nav_bar .menu > li > a {
   display: block;
   padding: 8px 0;
+  text-align: center;
 }
 .pageHeader .nav_bar .sub {
   background-color: red;
-  width: 178px;
+  width: 120px;
+  padding: 20px 15px 20px;
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+  display: none;
+}
+.pageHeader .nav_bar .sub li {
+  margin-bottom: 15px;
 }
 .pageHeader .btnHam {
   color: #fff;
@@ -789,6 +812,17 @@ body {
     width: 280px;
   }
 }
+@media all and (max-width: 720px) {
+  .three_client {
+    display: block;
+  }
+  .three_client li {
+    width: auto;
+  }
+  .three_client .three_text:after {
+    display: none;
+  }
+}
 .chart {
   background-image: url("../images/bg_msec05.jpg");
   background-repeat: no-repeat;
@@ -827,6 +861,11 @@ body {
   }
   .chart .chart_buttom {
     font-size: 15px;
+  }
+}
+@media all and (max-width: 720px) {
+  .picture img {
+    max-height: 260px;
   }
 }
 .inner_second {
@@ -973,11 +1012,26 @@ body {
     width: 50%;
   }
 
+  .contactBox {
+    display: block;
+  }
   .contactBox .contact h3 {
     font-size: 20px;
   }
   .contactBox .contact strong {
     font-size: 30px;
+  }
+  .contactBox form .text_name {
+    width: 80%;
+  }
+  .contactBox form .text_number {
+    width: 80%;
+  }
+  .contactBox button {
+    padding: 15px;
+    font-size: 15px;
+    top: 115px;
+    right: 20px;
   }
 }
 
